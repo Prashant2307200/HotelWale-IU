@@ -1,0 +1,58 @@
+main {
+    margin-top: 2.5rem;
+}
+
+.listings {
+    display: grid;  
+    gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+}
+
+.listings li {
+    list-style: none;
+}
+
+.listings li a {
+    text-decoration: none;
+    color: var(--tertiary-color)
+}
+
+.card {   
+    animation: fade;
+    animation-timeline: view();
+    animation-range: entry 0% cover 80%;
+    aspect-ratio: 1 / 1.2;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem; 
+}
+
+.card img { 
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+} 
+
+.card-text p:first-child {
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 1em;
+}
+
+.card:hover {
+    opacity: .85;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        scale: .9;
+    } to {
+        opacity: 1;
+        scale: 1;
+    }
+}

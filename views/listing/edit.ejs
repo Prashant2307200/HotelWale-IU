@@ -1,0 +1,40 @@
+<% layout("layouts/boilerplate.ejs") %>
+    <!-- required -->
+    <form class="needs-validation edit" action="/listings/<%= listing._id %>?_method=PUT" method="POST"
+        enctype="multipart/form-data">
+        <h3>Edit your Listing.</h3>
+        <div>
+            <label for="title">Title</label>
+            <input type="text" value="<%= listing.title %>" name="listing[title]" id="title">
+            <div class="correct valid-feedback">Please enter a title&#33;.</div>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea value="<%= listing.description %>" name="listing[description]" id="description"></textarea>
+            <div class="correct valid-feedback">Description is too short or large.</div>
+        </div>
+        <!-- <div>
+            <label for="image">Image</label>
+            <input type="text" value="<%= listing.image %>" name="listing[image]" id="image">
+        </div> -->
+        <div>
+            <label for="image">Upload listing image</label>
+            <img style="border-radius: 10px; width: 250px;" src="<%= originalImgUrl %>" alt="listing_img">
+            <input type="file" name="listing[image]" placeholder="Enter Image" id="image">
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input type="number" value="<%= listing.price %>" name="listing[price]" id="price">
+        </div>
+        <div>
+            <label for="country">Country</label>
+            <input type="text" value="<%= listing.country %>" name="listing[country]" id="country">
+            <div class="correct valid-feedback">Country should be valid.</div>
+        </div>
+        <div>
+            <label for="location">Location</label>
+            <input type="text" value="<%= listing.location %>" name="listing[location]" id="location">
+            <div class="correct valid-feedback">Location should be valid.</div>
+        </div>
+        <button type="submit" class="btn">Edit Listing</button>
+    </form>

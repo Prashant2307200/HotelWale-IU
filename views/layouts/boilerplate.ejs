@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelWale - <%=title="India's largest hotel service providers"%>
+    </title>
+    <meta name="description" content="We're the best Hotel service providers in India!">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="keywords" content="We're the best Hotel service providers in India!">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/stylesheets/review.css">
+    <link rel="stylesheet" href="/stylesheets/btn.css">
+    <link rel="stylesheet" href="/stylesheets/show.css">
+    <link rel="stylesheet" href="/stylesheets/review.css">
+    <link rel="stylesheet" href="/stylesheets/validation.css">
+    <link rel="stylesheet" href="/stylesheets/cards.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/flash.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <%- include("../includes/header.ejs") %>
+    </header>
+    <main>
+        <%- include("../includes/flash.ejs") %>
+            <%- body %>
+    </main>
+    <footer>
+        <%- include("../includes/footer.ejs") %>
+    </footer>
+    <script src="/javascripts/validation.js"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

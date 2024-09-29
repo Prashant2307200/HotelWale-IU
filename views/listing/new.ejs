@@ -1,0 +1,37 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <form class="needs-validation" id="new" action="/listings" method="POST" novalidate enctype="multipart/form-data">
+        <h3>Create a new Listing.</h3>
+        <div>
+            <label for="title">Enter Title</label>
+            <input type="text" name="listing[title]" id="title" placeholder="Enter Title">
+            <div class="valid-feedback">Please enter a title.</div>
+        </div>
+        <div>
+            <label for="description">Enter description</label>
+            <textarea name="listing[description]" id="description" placeholder="Enter description"></textarea>
+            <div class="valid-feedback">Description is too short or large.</div>
+        </div>
+        <!-- <div>
+            <label for="image">Enter image link</label>
+            <input type="text" name="listing[image]" id="image" placeholder="Enter img link/URL">
+        </div> -->
+        <div>
+            <label for="image">Upload listing image</label>
+            <input type="file" name="listing[image]" placeholder="Enter Image" id="image">
+        </div>
+        <div>
+            <label for="price">Enter price</label>
+            <input type="number" name="listing[price]" id="price" placeholder="Enter price">
+        </div>
+        <div>
+            <label for="country">Enter country</label>
+            <input type="text" name="listing[country]" id="country" placeholder="Enter country">
+            <div class="valid-feedback">Country should be valid.</div>
+        </div>
+        <div>
+            <label for="location">Enter location</label>
+            <input type="text" name="listing[location]" id="location" placeholder="Enter location">
+            <div class="valid-feedback">Location should be valid.</div>
+        </div>
+        <button class="btn" type="submit">Add Listing</button>
+    </form>

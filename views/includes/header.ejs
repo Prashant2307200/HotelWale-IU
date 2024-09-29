@@ -1,0 +1,23 @@
+<h1 class="nav-items" id="logo">
+    <a href="#">
+        <i class="ri-compass-3-line"></i>
+    </a>
+</h1>
+<input type="checkbox" id="nav-toggle">
+<nav class="nav-bar">
+    <ul>
+        <li class="nav-items"><a href="/">Home</a></li>
+        <li class="nav-items"><a href="/listings">All Listings</a></li>
+        <li class="nav-items"><a href="/listings/new">Add New Listing</a></li>
+        <% if(!user) { %>
+            <li class="nav-items"><a href="/">Sign Up</a></li>
+            <li class="nav-items"><a href="/">Log in</a></li>
+            <% } %>
+                <% if(user) { %>
+                    <li class="nav-items"><a href="/logout">Log out</a></li>
+                    <% } %>
+    </ul>
+</nav>
+<label for="nav-toggle">
+    <span>&#8801;</span>
+</label>

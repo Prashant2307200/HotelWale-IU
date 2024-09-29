@@ -1,0 +1,49 @@
+:root {
+    --primary-color: #fe424d;
+    --secondary-color: #ebebeb;
+    --tertiary-color: #222222;
+    --border-color: #ddd;
+    --flash-error-background: #f8d7da;
+    --flash-error-color: #721c24;
+    --flash-info-background: #fff3cd;
+    --flash-info-color: #856404;
+    --flash-success-background: #d4edda;
+    --flash-success-color: #155724;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+h1, h2, h3 {
+    text-wrap: balance;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* html {
+    color-scheme: dark light;
+} */
+
+main {
+    width: min(150ch, calc(100% - 4rem));
+    margin-inline: auto;
+}
+
+body {
+    padding-top: 5rem;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    font-family: system-ui;
+    overflow: auto;
+}

@@ -1,0 +1,27 @@
+.f-info-links a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+    
+.f-info { 
+    height: 8rem;
+    background-color: var(--secondary-color);
+    margin-top: 5rem;
+}
+
+.f-info, .f-info > * {
+    display: grid;
+    place-content: center;
+} 
+
+.f-info > * {
+    grid-auto-flow: column;
+}
+    
+.f-info-socials i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+} 

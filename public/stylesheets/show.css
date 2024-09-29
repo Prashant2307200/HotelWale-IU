@@ -1,0 +1,26 @@
+.show { 
+    display: grid;
+    place-content: center;
+}
+
+.show img, .show-grp {
+    width: min(800px, calc(100vw - 4rem));  
+}  
+
+.show h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.show #img {
+    border-radius: 1rem;
+    max-height: 500px;
+}
+
+.show-grp {
+    margin: .5rem 0;
+} 
+
+.show ul li {
+    list-style: none;
+}

@@ -1,0 +1,18 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <ul class="listings">
+        <% allListings.forEach(listing=> { %>
+            <li class="card">
+                <a href="/listings/<%= listing._id %>">
+                    <img src="<%= listing.image.url %>" alt="listing_img">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p>
+                                <%= listing.title %>
+                            </p>
+                            <p>&#8377; <%= listing.price?.toLocaleString("en-IN") %> / night</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <% }); %>
+    </ul>

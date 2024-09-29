@@ -1,0 +1,49 @@
+.flash {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    animation: popup 5s ease-in-out 5ms;
+}
+
+.flash > * {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.flash .error {
+    background: var(--flash-error-background);
+    color: var(--flash-error-color);
+    border: .1px solid var(--flash-error-color);
+}
+
+.flash .info {
+    background: var(--flash-info-background);
+    color: var(--flash-info-color);
+    border: .1px solid var(--flash-info-color);
+}
+
+.flash .success {
+    background: var(--flash-success-background);
+    color: var(--flash-success-color);
+    border: .1px solid var(--flash-success-color);
+}
+
+@keyframes popup {
+    0% {
+        top: -6%;
+    }
+    20% {
+        top: 16%;
+    }
+    80% {
+        top: 16%;
+    }
+    100% {
+        top: -6%;
+    }
+}
